@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Center, FlatList, Heading, HStack, IconButton, Text, useTheme, VStack } from 'native-base'
 import { ChatTeardropText, SignOut } from 'phosphor-react-native'
+import { signOut } from 'firebase/auth'
+
+import { firebaseAuth } from './../services/firebase'
 
 import Logo from './../assets/logo_secondary.svg'
 import { Filter } from './../components/Filter'
@@ -29,6 +32,10 @@ export const Home = () => {
     navigate('Register')
   }
 
+  const handleSignOut = async () => {
+    await signOut(firebaseAuth)
+  }
+
   return (
     <VStack flex={1} pb={6} bg="gray.700">
       <HStack
@@ -43,6 +50,7 @@ export const Home = () => {
         <Logo />
         <IconButton
           icon={<SignOut size={26} color={colors.gray[300]}/>}
+          onPress={handleSignOut}
         />
       </HStack>
 
