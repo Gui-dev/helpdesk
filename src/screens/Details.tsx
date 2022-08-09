@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { doc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { Box, HStack, ScrollView, Text, useTheme, VStack } from 'native-base'
-import { CircleWavyCheck, Clipboard, DesktopTower, Hourglass } from 'phosphor-react-native'
+import { CircleWavyCheck, ClipboardText, DesktopTower, Hourglass } from 'phosphor-react-native'
 
 import { Header } from '../components/Header'
 import { Input } from '../components/Input'
@@ -118,13 +118,13 @@ export const Details = () => {
           title="equipamento"
           description={`Patrimônio ${order.patrimony}`}
           icon={DesktopTower}
-          footer={order.when}
         />
 
         <CardDetail
           title="descrição do problema"
           description={order.description}
-          icon={Clipboard}
+          icon={ClipboardText}
+          footer={`Registrado em ${order.when}`}
         />
 
         <CardDetail
