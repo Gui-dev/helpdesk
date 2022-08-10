@@ -5,7 +5,7 @@
   <img alt="Helpdesk" src=".screens/home_1.jpg" width="19%">
   <img alt="Helpdesk" src=".screens/home_2.jpg" width="19%">
   <img alt="Helpdesk" src=".screens/register.jpg" width="19%">
-  <img alt="Helpdesk" src=".screens/fnish.jpg" width="19%">
+  <img alt="Helpdesk" src=".screens/finish.jpg" width="19%">
 </p>
 
 ## Tecnologias
